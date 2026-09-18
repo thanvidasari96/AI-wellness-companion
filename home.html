@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Wellness Companion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <p class="date" id="todayDate"></p>
+
+                <h1>Welcome Back 👋</h1>
+
+                <p class="subtitle">
+                    Take a moment for yourself today.
+                </p>
+            </div>
+
+            <div class="profile-area">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    👤
+                </div>
+
+                <button
+                    class="edit-profile"
+                    onclick="editProfile()">
+                    Edit
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME CARD -->
+        <section class="welcome-card">
+
+            <div class="welcome-icon">
+                🌿
+            </div>
+
+            <div>
+
+                <h2>
+                    Your wellbeing matters.
+                </h2>
+
+                <p>
+                    Small positive steps today can make
+                    your tomorrow better.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- WELLNESS SCORE -->
+        <section class="score-card">
+
+            <div>
+
+                <p class="section-label">
+                    TODAY'S WELLNESS
+                </p>
+
+                <h2 id="wellnessScore">
+                    —
+                </h2>
+
+                <p id="scoreMessage">
+                    Complete your check-in.
+                </p>
+
+                <p
+                    class="score-description"
+                    id="scoreDescription">
+                    Your wellness score will appear here
+                    after you complete today's check-in.
+                </p>
+
+            </div>
+
+            <div class="score-circle">
+
+                <span id="scoreCircleValue">
+                    —
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- MOOD -->
+        <section class="section">
+
+            <h2 class="section-title">
+                How are you feeling?
+            </h2>
+
+            <div class="mood-container">
+
+                <button
+                    class="mood-btn"
+                    data-mood="happy"
+                    onclick="selectMood(this)">
+                    😊
+                    <span>Happy</span>
+                </button>
+
+                <button
+                    class="mood-btn"
+                    data-mood="calm"
+                    onclick="selectMood(this)">
+                    😌
+                    <span>Calm</span>
+                </button>
+
+                <button
+                    class="mood-btn"
+                    data-mood="okay"
+                    onclick="selectMood(this)">
+                    🙂 
+                    <span>Okay</span>
+                </button>
+
+                <button
+                    class="mood-btn"
+                    data-mood="stressed"
+                    onclick="selectMood(this)">
+                    😟
+                    <span>Stressed</span>
+                </button>
+
+                <button
+                    class="mood-btn"
+                    data-mood="tired"
+                    onclick="selectMood(this)">
+                    😴
+                    <span>Tired</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- DAILY CHECK-IN -->
+        <section class="checkin-card">
+
+            <div class="checkin-header">
+
+                <div>
+                    <p class="section-label">
+                        DAILY CHECK-IN
+                    </p>
+
+                    <h2>
+                        How was your day?
+                    </h2>
+                </div>
+
+                <div class="checkin-icon">
+                    ✨
+                </div>
+
+            </div>
+
+
+            <!-- STUDY -->
+            <div class="checkin-row">
+
+                <div>
+                    <strong>📚 Study</strong>
+
+                    <p>
+                        How productive was your study?
+                    </p>
+                </div>
+
+                <select
+                    id="studyRating"
+                    onchange="updateWellnessScore()">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SLEEP -->
+            <div class="checkin-row">
+
+                <div>
+                    <strong>🌙 Sleep</strong>
+
+                    <p>
+                        How was your sleep?
+                    </p>
+                </div>
+
+                <select
+                    id="sleepRating"
+                    onchange="updateWellnessScore()">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- HYDRATION -->
+            <div class="checkin-row">
+
+                <div>
+                    <strong>💧 Hydration</strong>
+
+                    <p>
+                        How well did you stay hydrated?
+                    </p>
+                </div>
+
+                <select
+                    id="hydrationRating"
+                    onchange="updateWellnessScore()">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- BREAKS -->
+            <div class="checkin-row">
+
+                <div>
+                    <strong>☕ Breaks</strong>
+
+                    <p>
+                        Did you take enough breaks?
+                    </p>
+                </div>
+
+                <select
+                    id="breakRating"
+                    onchange="updateWellnessScore()">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                class="save-checkin"
+                onclick="saveCheckin()">
+
+                Save Today's Check-in
+
+            </button>
+
+        </section>
+
+
+        <!-- TODAY'S FACTORS -->
+        <section class="section">
+
+            <h2 class="section-title">
+                Today's Factors
+            </h2>
+
+
+            <div class="factors">
+
+                <div class="factor study-factor">
+
+                    <span class="factor-icon">
+                        📚
+                    </span>
+
+                    <div>
+                        <strong>Study</strong>
+
+                        <p id="studyStatus">
+                            Not checked
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="factor sleep-factor">
+
+                    <span class="factor-icon">
+                        🌙
+                    </span>
+
+                    <div>
+                        <strong>Sleep</strong>
+
+                        <p id="sleepStatus">
+                            Not checked
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="factor hydration-factor">
+
+                    <span class="factor-icon">
+                        💧
+                    </span>
+
+                    <div>
+                        <strong>Hydration</strong>
+
+                        <p id="hydrationStatus">
+                            Not checked
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="factor break-factor">
+
+                    <span class="factor-icon">
+                        ☕
+                    </span>
+
+                    <div>
+                        <strong>Breaks</strong>
+
+                        <p id="breakStatus">
+                            Not checked
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI ACTION -->
+        <section class="ai-action-card">
+
+            <div class="ai-action-icon">
+                🤖
+            </div>
+
+            <div>
+
+                <h2>
+                    Need some support?
+                </h2>
+
+                <p>
+                    Talk to your AI Wellness Companion
+                    about your day.
+                </p>
+
+            </div>
+
+            <a
+                href="ai.html"
+                class="ai-action-button">
+
+                Talk
+
+            </a>
+
+        </section>
+
+
+        <!-- BOTTOM NAV -->
+        <nav class="bottom-nav">
+
+            <a
+                href="home.html"
+                class="nav-item active">
+
+                <span>🏠</span>
+                <p>Home</p>
+
+            </a>
+
+
+            <a
+                href="ai.html"
+                class="nav-item">
+
+                <span>🤖</span>
+                <p>AI</p>
+
+            </a>
+
+
+            <a
+                href="insights.html"
+                class="nav-item">
+
+                <span>📊</span>
+                <p>Insights</p>
+
+            </a>
+
+        </nav>
+
+
+    </div>
+
+
+    <!-- PROFILE MODAL -->
+
+    <div
+        class="profile-modal"
+        id="profileModal">
+
+        <div class="profile-modal-card">
+
+            <div class="profile-modal-header">
+
+                <div>
+                    <p class="section-label">
+                        PROFILE
+                    </p>
+
+                    <h2>
+                        Edit Profile
+                    </h2>
+                </div>
+
+                <button
+                    class="close-profile"
+                    onclick="closeProfile()">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <!-- NAME -->
+            <label
+                for="profileNameInput"
+                class="profile-label">
+
+                Your Name
+
+            </label>
+
+            <input
+                type="text"
+                id="profileNameInput"
+                class="profile-name-input"
+                placeholder="Enter your name"
+                onkeydown="handleProfileEnter(event)"
+                autocomplete="off">
+
+
+            <!-- AVATAR -->
+            <p class="profile-label">
+                Choose Avatar
+            </p>
+
+            <div class="avatar-options">
+
+
+                <button
+                    type="button"
+                    class="avatar-option"
+                    id="femaleAvatar"
+                    onclick="selectAvatar('👩', this)">
+
+                    <span class="avatar-large">
+                        👩
+                    </span>
+
+                    <span>
+                        Female
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="avatar-option"
+                    id="maleAvatar"
+                    onclick="selectAvatar('👨', this)">
+
+                    <span class="avatar-large">
+                        👨
+                    </span>
+
+                    <span>
+                        Male
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="profile-buttons">
+
+                <button
+                    type="button"
+                    class="cancel-profile"
+                    onclick="closeProfile()">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    type="button"
+                    class="save-profile"
+                    onclick="saveProfile()">
+
+                    Save Profile
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

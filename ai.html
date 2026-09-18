@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Companion</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- HEADER -->
+
+    <header class="screen-header">
+
+        <div>
+
+            <p class="small-text">
+                Your personal companion
+            </p>
+
+            <h1>
+                AI Companion ✦
+            </h1>
+
+        </div>
+
+    </header>
+
+
+    <!-- INTRO -->
+
+    <section class="ai-intro">
+
+        <div class="large-ai-icon">
+            ✦
+        </div>
+
+        <h2>
+            How can I help?
+        </h2>
+
+        <p>
+            Talk to me about your study,
+            routine, stress or daily goals.
+        </p>
+
+    </section>
+
+
+    <!-- CHAT -->
+
+    <section class="chat-area">
+
+        <div class="ai-message">
+
+            <div class="ai-avatar">
+                ✦
+            </div>
+
+            <p>
+                Hi! 👋 I'm your AI Wellness Companion.
+                How are you feeling today?
+            </p>
+
+        </div>
+
+
+        <div class="ai-message">
+
+            <div class="ai-avatar">
+                ✦
+            </div>
+
+            <p>
+                I can help you with study plans,
+                breaks, routines, motivation and
+                general wellness support.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Quick actions
+        </h2>
+
+        <div class="quick-prompts">
+
+            <button onclick="sendPrompt('Create a simple study plan')">
+                📚 Study plan
+            </button>
+
+            <button onclick="sendPrompt('I want to take a break')">
+                🌿 Take a break
+            </button>
+
+            <button onclick="sendPrompt('Help me organize my day')">
+                📝 Organize my day
+            </button>
+
+            <button onclick="sendPrompt('Give me a positive reminder')">
+                💭 Positive reminder
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- INPUT -->
+
+    <section class="chat-input">
+
+        <input
+            type="text"
+            id="messageInput"
+            placeholder="Type your message..."
+            onkeydown="handleEnter(event)"
+        >
+
+        <button class="mic"
+                onclick="startVoice()">
+            🎤
+        </button>
+
+        <button class="send"
+                onclick="sendMessage()">
+            ➤
+        </button>
+
+    </section>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="bottom-nav">
+
+        <a href="home.html">
+            🏠
+            <span>Home</span>
+        </a>
+
+        <a href="ai.html" class="active">
+            ✦
+            <span>AI</span>
+        </a>
+
+        <a href="insights.html">
+            📊
+            <span>Insights</span>
+        </a>
+
+    </nav>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

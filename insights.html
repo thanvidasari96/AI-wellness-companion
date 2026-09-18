@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Wellness Insights</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- HEADER -->
+
+    <header class="screen-header">
+
+        <div>
+
+            <p class="small-text">
+                Your progress
+            </p>
+
+            <h1>
+                Insights 📊
+            </h1>
+
+        </div>
+
+    </header>
+
+
+    <!-- INTRO -->
+
+    <section class="insight-intro">
+
+        <div class="large-icon">
+            📊
+        </div>
+
+        <h2>
+            Your Wellness Insights
+        </h2>
+
+        <p>
+            Understand your patterns and build
+            healthier daily habits.
+        </p>
+
+    </section>
+
+
+    <!-- WEEKLY SCORE -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Weekly Wellness
+        </h2>
+
+        <div class="score-card">
+
+            <div class="score-circle">
+
+                <strong id="weeklyScore">
+                    0
+                </strong>
+
+                <span>
+                    /100
+                </span>
+
+            </div>
+
+            <div class="score-info">
+
+                <h3 id="weeklyMessage">
+                    Your weekly progress
+                </h3>
+
+                <p id="weeklyDescription">
+                    Complete your daily check-ins
+                    to build your wellness history.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WEEKLY GRAPH -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Weekly Wellness Trend
+        </h2>
+
+        <div class="chart-card">
+
+            <div class="bars">
+
+                <div class="bar-item">
+
+                    <div class="bar"
+                         id="barMon">
+                    </div>
+
+                    <span>
+                        Mon
+                    </span>
+
+                </div>
+
+
+                <div class="bar-item">
+
+                    <div class="bar"
+                         id="barTue">
+                    </div>
+
+                    <span>
+                        Tue
+                    </span>
+
+                </div>
+
+
+                <div class="bar-item">
+
+                    <div class="bar"
+                         id="barWed">
+                    </div>
+
+                    <span>
+                        Wed
+                    </span>
+
+                </div>
+
+
+                <div class="bar-item">
+
+                    <div class="bar"
+                         id="barThu">
+                    </div>
+
+                    <span>
+                        Thu
+                    </span>
+
+                </div>
+
+
+                <div class="bar-item">
+
+                    <div class="bar"
+                         id="barFri">
+                    </div>
+
+                    <span>
+                        Fri
+                    </span>
+
+                </div>
+
+
+                <div class="bar-item">
+
+                    <div class="bar"
+                         id="barSat">
+                    </div>
+
+                    <span>
+                        Sat
+                    </span>
+
+                </div>
+
+
+                <div class="bar-item">
+
+                    <div class="bar"
+                         id="barSun">
+                    </div>
+
+                    <span>
+                        Sun
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="chart-note">
+            Higher bars represent better overall
+            wellness for that day.
+        </p>
+
+    </section>
+
+
+    <!-- BEST DAY -->
+
+    <section class="section">
+
+        <div class="best-day-card">
+
+            <div class="card-icon">
+                ⭐
+            </div>
+
+            <div>
+
+                <h3>
+                    Best Wellness Day
+                </h3>
+
+                <p id="bestDay">
+                    Complete more check-ins to
+                    identify your best day.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PATTERN -->
+
+    <section class="section">
+
+        <div class="pattern-card">
+
+            <div class="card-icon">
+                🔍
+            </div>
+
+            <div>
+
+                <h3>
+                    Your Pattern
+                </h3>
+
+                <p id="patternText">
+                    Your pattern will appear
+                    as you complete more check-ins.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GOAL -->
+
+    <section class="section">
+
+        <div class="goal-card">
+
+            <div class="card-icon">
+                🎯
+            </div>
+
+            <div>
+
+                <h3>
+                    Today's Goal
+                </h3>
+
+                <p id="goalText">
+                    Complete today's check-in
+                    to receive a personalized goal.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY GOAL -->
+
+    <section class="section">
+
+        <div class="why-goal-card">
+
+            <div class="card-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h3>
+                    Why this goal?
+                </h3>
+
+                <p id="goalReason">
+                    Your goal will be generated
+                    from your recent wellness pattern.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="bottom-nav">
+
+        <a href="home.html">
+            🏠
+            <span>Home</span>
+        </a>
+
+        <a href="ai.html">
+            ✦
+            <span>AI</span>
+        </a>
+
+        <a href="insights.html" class="active">
+            📊
+            <span>Insights</span>
+        </a>
+
+    </nav>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
