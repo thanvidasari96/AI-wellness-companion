@@ -5,42 +5,40 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>AI Companion</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css">
 
 </head>
 
+
 <body>
 
-<div class="app">
 
-
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
 
     <header class="screen-header">
 
-        <div>
+        <p class="small-text">
+            Your personal companion
+        </p>
 
-            <p class="small-text">
-                Your personal companion
-            </p>
-
-            <h1>
-                AI Companion ✦
-            </h1>
-
-        </div>
+        <h1>
+            AI Companion ✦
+        </h1>
 
     </header>
 
 
-    <!-- INTRO -->
+    <!-- ================= INTRO ================= -->
 
-    <section class="ai-intro">
+    <div class="ai-intro">
 
         <div class="large-ai-icon">
             ✦
@@ -51,82 +49,105 @@
         </h2>
 
         <p>
-            Talk to me about your study,
-            routine, stress or daily goals.
+            I'm here to help you manage your day,
+            studies and overall wellness.
         </p>
 
-    </section>
+    </div>
 
 
-    <!-- CHAT -->
+    <!-- ================= CHAT ================= -->
 
-    <section class="chat-area">
+    <div
+        class="chat-area"
+        id="chatArea">
+
 
         <div class="ai-message">
 
-            <div class="ai-avatar">
+            <span class="ai-avatar">
                 ✦
-            </div>
+            </span>
 
-            <p>
-                Hi! 👋 I'm your AI Wellness Companion.
+            <span>
+                Hi! I'm your AI Wellness Companion.
                 How are you feeling today?
-            </p>
+            </span>
 
         </div>
 
 
         <div class="ai-message">
 
-            <div class="ai-avatar">
+            <span class="ai-avatar">
                 ✦
-            </div>
+            </span>
 
-            <p>
-                I can help you with study plans,
-                breaks, routines, motivation and
-                general wellness support.
-            </p>
+            <span>
+                You can ask me about studying,
+                taking breaks, organizing your day
+                or simply get a positive reminder.
+            </span>
 
         </div>
 
-    </section>
+
+    </div>
 
 
-    <!-- QUICK ACTIONS -->
+    <!-- ================= QUICK ACTIONS ================= -->
 
     <section class="section">
 
         <h2 class="section-title">
-            Quick actions
+            Quick Actions
         </h2>
+
 
         <div class="quick-prompts">
 
-            <button onclick="sendPrompt('Create a simple study plan')">
-                📚 Study plan
+
+            <button
+                onclick="sendPrompt('Create a simple study plan')">
+
+                📚 Study Plan
+
             </button>
 
-            <button onclick="sendPrompt('I want to take a break')">
-                🌿 Take a break
+
+            <button
+                onclick="sendPrompt('I want to take a break')">
+
+                ☕ Take a Break
+
             </button>
 
-            <button onclick="sendPrompt('Help me organize my day')">
-                📝 Organize my day
+
+            <button
+                onclick="sendPrompt('Help me organize my day')">
+
+                🗓️ Organize Day
+
             </button>
 
-            <button onclick="sendPrompt('Give me a positive reminder')">
-                💭 Positive reminder
+
+            <button
+                onclick="sendPrompt('Give me a positive reminder')">
+
+                🌱 Positive Reminder
+
             </button>
+
 
         </div>
 
     </section>
 
 
-    <!-- INPUT -->
+    <!-- ================= CHAT INPUT ================= -->
 
-    <section class="chat-input">
+    <div class="chat-input">
+
 
         <input
             type="text"
@@ -135,44 +156,84 @@
             onkeydown="handleEnter(event)"
         >
 
-        <button class="mic"
-                onclick="startVoice()">
+
+        <button
+            class="mic"
+            onclick="startVoice()">
+
             🎤
+
         </button>
 
-        <button class="send"
-                onclick="sendMessage()">
+
+        <button
+            class="send"
+            onclick="sendMessage()">
+
             ➤
+
         </button>
 
-    </section>
+
+    </div>
 
 
-    <!-- NAVIGATION -->
+    <!-- ================= BOTTOM NAV ================= -->
 
     <nav class="bottom-nav">
 
-        <a href="home.html">
-            🏠
-            <span>Home</span>
+
+        <a
+            href="home.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ⌂
+            </span>
+
+            <span class="nav-text">
+                Home
+            </span>
+
         </a>
 
-        <a href="ai.html" class="active">
-            ✦
-            <span>AI</span>
+
+        <a
+            href="ai.html"
+            class="nav-item active">
+
+            <span class="nav-icon">
+                ✦
+            </span>
+
+            <span class="nav-text">
+                AI
+            </span>
+
         </a>
 
-        <a href="insights.html">
-            📊
-            <span>Insights</span>
+
+        <a
+            href="insights.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                📊
+            </span>
+
+            <span class="nav-text">
+                Insights
+            </span>
+
         </a>
+
 
     </nav>
 
-</div>
 
+    <!-- ================= JAVASCRIPT ================= -->
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

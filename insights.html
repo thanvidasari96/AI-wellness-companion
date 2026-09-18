@@ -5,42 +5,40 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Wellness Insights</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css">
 
 </head>
 
+
 <body>
 
-<div class="app">
 
-
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
 
     <header class="screen-header">
 
-        <div>
+        <p class="small-text">
+            Your progress
+        </p>
 
-            <p class="small-text">
-                Your progress
-            </p>
-
-            <h1>
-                Insights 📊
-            </h1>
-
-        </div>
+        <h1>
+            Insights 📊
+        </h1>
 
     </header>
 
 
-    <!-- INTRO -->
+    <!-- ================= INTRO ================= -->
 
-    <section class="insight-intro">
+    <div class="insight-intro">
 
         <div class="large-icon">
             📊
@@ -51,14 +49,14 @@
         </h2>
 
         <p>
-            Understand your patterns and build
-            healthier daily habits.
+            See how your daily habits are affecting
+            your overall wellness.
         </p>
 
-    </section>
+    </div>
 
 
-    <!-- WEEKLY SCORE -->
+    <!-- ================= WEEKLY WELLNESS ================= -->
 
     <section class="section">
 
@@ -66,7 +64,37 @@
             Weekly Wellness
         </h2>
 
+
         <div class="score-card">
+
+
+            <p class="section-label">
+                Weekly Average
+            </p>
+
+
+            <h2>
+                <span id="weeklyScore">
+                    0
+                </span>
+                / 100
+            </h2>
+
+
+            <p id="weeklyMessage">
+                Keep checking in.
+            </p>
+
+
+            <p
+                class="score-description"
+                id="weeklyDescription">
+
+                Your weekly wellness score
+                is based on your daily habits.
+
+            </p>
+
 
             <div class="score-circle">
 
@@ -80,25 +108,13 @@
 
             </div>
 
-            <div class="score-info">
-
-                <h3 id="weeklyMessage">
-                    Your weekly progress
-                </h3>
-
-                <p id="weeklyDescription">
-                    Complete your daily check-ins
-                    to build your wellness history.
-                </p>
-
-            </div>
 
         </div>
 
     </section>
 
 
-    <!-- WEEKLY GRAPH -->
+    <!-- ================= WEEKLY TREND ================= -->
 
     <section class="section">
 
@@ -106,14 +122,20 @@
             Weekly Wellness Trend
         </h2>
 
+
         <div class="chart-card">
+
 
             <div class="bars">
 
+
+                <!-- Monday -->
+
                 <div class="bar-item">
 
-                    <div class="bar"
-                         id="barMon">
+                    <div
+                        class="bar"
+                        id="barMon">
                     </div>
 
                     <span>
@@ -123,10 +145,13 @@
                 </div>
 
 
+                <!-- Tuesday -->
+
                 <div class="bar-item">
 
-                    <div class="bar"
-                         id="barTue">
+                    <div
+                        class="bar"
+                        id="barTue">
                     </div>
 
                     <span>
@@ -136,10 +161,13 @@
                 </div>
 
 
+                <!-- Wednesday -->
+
                 <div class="bar-item">
 
-                    <div class="bar"
-                         id="barWed">
+                    <div
+                        class="bar"
+                        id="barWed">
                     </div>
 
                     <span>
@@ -149,10 +177,13 @@
                 </div>
 
 
+                <!-- Thursday -->
+
                 <div class="bar-item">
 
-                    <div class="bar"
-                         id="barThu">
+                    <div
+                        class="bar"
+                        id="barThu">
                     </div>
 
                     <span>
@@ -162,10 +193,13 @@
                 </div>
 
 
+                <!-- Friday -->
+
                 <div class="bar-item">
 
-                    <div class="bar"
-                         id="barFri">
+                    <div
+                        class="bar"
+                        id="barFri">
                     </div>
 
                     <span>
@@ -175,10 +209,13 @@
                 </div>
 
 
+                <!-- Saturday -->
+
                 <div class="bar-item">
 
-                    <div class="bar"
-                         id="barSat">
+                    <div
+                        class="bar"
+                        id="barSat">
                     </div>
 
                     <span>
@@ -188,10 +225,13 @@
                 </div>
 
 
+                <!-- Sunday -->
+
                 <div class="bar-item">
 
-                    <div class="bar"
-                         id="barSun">
+                    <div
+                        class="bar"
+                        id="barSun">
                     </div>
 
                     <span>
@@ -200,49 +240,45 @@
 
                 </div>
 
+
             </div>
 
-        </div>
 
-        <p class="chart-note">
-            Higher bars represent better overall
-            wellness for that day.
-        </p>
+            <p class="chart-note">
+                Your wellness score across the week
+            </p>
+
+
+        </div>
 
     </section>
 
 
-    <!-- BEST DAY -->
+    <!-- ================= BEST DAY ================= -->
 
     <section class="section">
+
 
         <div class="best-day-card">
 
-            <div class="card-icon">
-                ⭐
-            </div>
+            <h3>
+                🌟 Best Day
+            </h3>
 
-            <div>
-
-                <h3>
-                    Best Wellness Day
-                </h3>
-
-                <p id="bestDay">
-                    Complete more check-ins to
-                    identify your best day.
-                </p>
-
-            </div>
+            <p id="bestDay">
+                Your best wellness day will appear here.
+            </p>
 
         </div>
+
 
     </section>
 
 
-    <!-- PATTERN -->
+    <!-- ================= PATTERN ================= -->
 
     <section class="section">
+
 
         <div class="pattern-card">
 
@@ -250,27 +286,25 @@
                 🔍
             </div>
 
-            <div>
+            <h3>
+                Your Pattern
+            </h3>
 
-                <h3>
-                    Your Pattern
-                </h3>
-
-                <p id="patternText">
-                    Your pattern will appear
-                    as you complete more check-ins.
-                </p>
-
-            </div>
+            <p id="patternText">
+                We're looking for patterns in your
+                wellness data.
+            </p>
 
         </div>
+
 
     </section>
 
 
-    <!-- GOAL -->
+    <!-- ================= GOAL ================= -->
 
     <section class="section">
+
 
         <div class="goal-card">
 
@@ -278,27 +312,25 @@
                 🎯
             </div>
 
-            <div>
+            <h3>
+                Today's Goal
+            </h3>
 
-                <h3>
-                    Today's Goal
-                </h3>
-
-                <p id="goalText">
-                    Complete today's check-in
-                    to receive a personalized goal.
-                </p>
-
-            </div>
+            <p id="goalText">
+                Complete your daily check-in
+                and we'll create a personalized goal.
+            </p>
 
         </div>
+
 
     </section>
 
 
-    <!-- WHY GOAL -->
+    <!-- ================= WHY THIS GOAL ================= -->
 
     <section class="section">
+
 
         <div class="why-goal-card">
 
@@ -306,49 +338,77 @@
                 💡
             </div>
 
-            <div>
+            <h3>
+                Why This Goal?
+            </h3>
 
-                <h3>
-                    Why this goal?
-                </h3>
-
-                <p id="goalReason">
-                    Your goal will be generated
-                    from your recent wellness pattern.
-                </p>
-
-            </div>
+            <p id="goalReason">
+                Your goal is based on your recent
+                wellness patterns.
+            </p>
 
         </div>
+
 
     </section>
 
 
-    <!-- NAVIGATION -->
+    <!-- ================= BOTTOM NAV ================= -->
 
     <nav class="bottom-nav">
 
-        <a href="home.html">
-            🏠
-            <span>Home</span>
+
+        <a
+            href="home.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ⌂
+            </span>
+
+            <span class="nav-text">
+                Home
+            </span>
+
         </a>
 
-        <a href="ai.html">
-            ✦
-            <span>AI</span>
+
+        <a
+            href="ai.html"
+            class="nav-item">
+
+            <span class="nav-icon">
+                ✦
+            </span>
+
+            <span class="nav-text">
+                AI
+            </span>
+
         </a>
 
-        <a href="insights.html" class="active">
-            📊
-            <span>Insights</span>
+
+        <a
+            href="insights.html"
+            class="nav-item active">
+
+            <span class="nav-icon">
+                📊
+            </span>
+
+            <span class="nav-text">
+                Insights
+            </span>
+
         </a>
+
 
     </nav>
 
-</div>
 
+    <!-- ================= JAVASCRIPT ================= -->
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
